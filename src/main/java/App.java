@@ -26,8 +26,6 @@ public class App {
         port(port);
 
 
-
-
         get("/departments","application/json",(request, response) -> gson.toJson(deptDao.allDepartments()));
 
         post("/departments/new","application/json",(request, response) -> {
@@ -161,7 +159,7 @@ public class App {
             return gson.toJson(newsDao.findById(newsId));
         });
 
-        get("/sitemap","application/json",(request, response) ->{
+        get("/navigate","application/json",(request, response) ->{
             return gson.toJson(navigateDao.allPaths());
         });
 
